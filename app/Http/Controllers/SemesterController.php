@@ -11,8 +11,10 @@ class SemesterController extends Controller
         $all_data_semester = [];
         foreach ($curriculums as $curriculum){
             $http_value = "https://student.karsu.uz/rest/v1/data/semester-list?page=1&_curriculum=".$curriculum[0]."&_education_year=".$education_year;
-            $data = json_decode(curl_exec(IndexController::auth_bearer($http_value)))->data->items;
-            $all_data_semester[] = [$data[$semester]->code, $curriculum[1], $data[$semester]->_curriculum];
+            $data = json_decode(curl_exec(IndexController::auth_bearer($http_value)));
+            if ($data->data->items){
+                $all_data_semester[] = [$data->data->items[$semester]->code, $curriculum[1], $data->data->items[$semester]->_curriculum];
+            }
         }
         return $all_data_semester;
 

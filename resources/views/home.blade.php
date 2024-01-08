@@ -5,6 +5,6 @@
         <li><a href="{{route('education_year')}}">Controls</a> </li>
         <li><a href="{{route('curriculum')}}">Curriculum</a> </li>
         <li><a href="{{route('subject_education_year')}}">Curriculum-Subjects</a> </li>
-        <li><a href="{{route('group')}}">Group</a> </li>
+        <li><a href="{{route('group_faculties')}}">Group</a> </li>
     </ul>
 @endsection

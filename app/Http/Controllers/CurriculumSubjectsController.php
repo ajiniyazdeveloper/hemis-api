@@ -35,8 +35,11 @@ class CurriculumSubjectsController extends Controller
         $all_datas = [];
         foreach ($curriculum_semesters->query->parameters['curriculum_semesters'] as $curriculum_semester) {
             $http_value = "https://student.karsu.uz/rest/v1/data/subject-list?page=1&limit=30&_curriculum=" . $curriculum_semester[2]."&_exam_finish=11&_semester=" . $curriculum_semester[0];
-            $data = json_decode(curl_exec(IndexController::auth_bearer($http_value)))->data;
-            $all_datas[] = [$curriculum_semester[1], $data->pagination->totalCount];
+            $data = json_decode(curl_exec(IndexController::auth_bearer($http_value)))->data->items;
+            foreach ($data as $val){
+                $val->curriculum_name = $curriculum_semester[1];
+                $all_datas[] = $val;
+            }
         }
         return view('lists.curriculum_subjects.data_view', compact('all_datas'));
     }

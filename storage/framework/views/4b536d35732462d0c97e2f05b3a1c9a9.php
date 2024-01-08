@@ -4,7 +4,7 @@
         <li><a href="<?php echo e(route('education_year')); ?>">Controls</a> </li>
         <li><a href="<?php echo e(route('curriculum')); ?>">Curriculum</a> </li>
         <li><a href="<?php echo e(route('subject_education_year')); ?>">Curriculum-Subjects</a> </li>
-        <li><a href="<?php echo e(route('group')); ?>">Group</a> </li>
+        <li><a href="<?php echo e(route('group_faculties')); ?>">Group</a> </li>
     </ul>
 <?php $__env->stopSection(); ?>
 

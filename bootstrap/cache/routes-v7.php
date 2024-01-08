@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::WY96ZU0UZ115sgCj',
+            '_route' => 'generated::t7kaDLzuLLyF1hsh',
           ),
           1 => NULL,
           2 => 
@@ -216,13 +216,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/group' => 
+      '/group_faculties' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'group',
+            '_route' => 'group_faculties',
           ),
           1 => NULL,
           2 => 
@@ -239,7 +239,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/c(?|ontrols/([^/]++)(?|(*:31)|/([^/]++)(*:47))|urriculum_subjects/([^/]++)(?|(*:85)|/([^/]++)(?|(*:104)|/([^/]++)/\\[curriculums\\](?|(*:140)|/\\[curriculum_semesters\\](*:173))))))/?$}sDu',
+      0 => '{^(?|/c(?|ontrols/([^/]++)(?|(*:31)|/([^/]++)(*:47))|urriculum_subjects/([^/]++)(?|(*:85)|/([^/]++)(?|(*:104)|/([^/]++)/\\[curriculums\\](?|(*:140)|/\\[curriculum_semesters\\](*:173)))))|/group_faculties/([^/]++)(*:210))/?$}sDu',
     ),
     3 => 
     array (
@@ -384,6 +384,29 @@ app('router')->setCompiledRoutes(
           3 => NULL,
           4 => false,
           5 => false,
+          6 => NULL,
+        ),
+      ),
+      210 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'group_faculty',
+          ),
+          1 => 
+          array (
+            0 => 'faculty_id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
           6 => NULL,
         ),
         1 => 
@@ -548,7 +571,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::WY96ZU0UZ115sgCj' => 
+    'generated::t7kaDLzuLLyF1hsh' => 
     array (
       'methods' => 
       array (
@@ -571,7 +594,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::WY96ZU0UZ115sgCj',
+        'as' => 'generated::t7kaDLzuLLyF1hsh',
       ),
       'fallback' => false,
       'defaults' => 
@@ -994,14 +1017,51 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'group' => 
+    'group_faculties' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'group',
+      'uri' => 'group_faculties',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\GroupController@group_faculties',
+        'controller' => 'App\\Http\\Controllers\\GroupController@group_faculties',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'group_faculties',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'group_faculty' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'group_faculties/{faculty_id}',
       'action' => 
       array (
         'middleware' => 
@@ -1015,7 +1075,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'group',
+        'as' => 'group_faculty',
       ),
       'fallback' => false,
       'defaults' => 

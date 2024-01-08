@@ -23,4 +23,5 @@ Route::get('/curriculum_subjects/{education_year}/{faculty_id}', [CurriculumSubj
 Route::get('/curriculum_subjects/{education_year}/{faculty_id}/{semester}/[curriculums]', [CurriculumSubjectsController::class, 'curriculum_subjects'])->name('curriculum_subjects');
 Route::get('/curriculum_subjects/{education_year}/{faculty_id}/{semester}/[curriculums]/[curriculum_semesters]', [CurriculumSubjectsController::class, 'curriculum_subjects_all_data'])->name('curriculum_subjects_all_data');
 
-Route::get('/group', [GroupController::class, 'group'])->name('group');
+Route::get('/group_faculties', [GroupController::class, 'group_faculties'])->name('group_faculties');
+Route::get('/group_faculties/{faculty_id}', [GroupController::class, 'group'])->name('group_faculty');

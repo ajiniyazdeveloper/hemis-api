@@ -25,7 +25,7 @@
                         <td> {{$control->subject->name}} </td>
                         <td> {{$control->semester->name}} </td>
                         <td> {{$control->group->name}} </td>
-                        <td> {{$control->department->name}} </td>
+                        <td> {{$control->faculty->name}} </td>
                         <td> {{$control->examType->name}} </td>
                         <td> {{$control->finalExamType->name}} </td>
                         <td> {{$control->employee->name}} </td>

@@ -5,7 +5,8 @@
                 <tr>
                     <Td>T/N</Td>
                     <Td>Curriculum_name</Td>
-                    <Td>totalCount</Td>
+                    <Td>Subject_name</Td>
+                    <Td>RatingGrade</Td>
 
                 </tr>
 
@@ -15,8 +16,9 @@
                 <?php $__currentLoopData = $all_datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $all_data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr>
                         <td><?php echo e($i++); ?></td>
-                        <td><?php echo e($all_data[0]); ?></td>
-                        <td><?php echo e($all_data[1]); ?></td>
+                        <td><?php echo e($all_data->curriculum_name); ?></td>
+                        <td><?php echo e($all_data->subject->name); ?></td>
+                        <td><?php echo e($all_data->ratingGrade->name); ?></td>
                     </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </table>

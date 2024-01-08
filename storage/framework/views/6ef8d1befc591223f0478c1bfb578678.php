@@ -24,7 +24,7 @@
                         <td> <?php echo e($control->subject->name); ?> </td>
                         <td> <?php echo e($control->semester->name); ?> </td>
                         <td> <?php echo e($control->group->name); ?> </td>
-                        <td> <?php echo e($control->department->name); ?> </td>
+                        <td> <?php echo e($control->faculty->name); ?> </td>
                         <td> <?php echo e($control->examType->name); ?> </td>
                         <td> <?php echo e($control->finalExamType->name); ?> </td>
                         <td> <?php echo e($control->employee->name); ?> </td>
