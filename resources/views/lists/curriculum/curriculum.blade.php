@@ -11,7 +11,6 @@
                     <Td>Specialty</Td>
                     <Td>Education Type</Td>
                     <Td>Education Form</Td>
-                    <Td>Education Period</Td>
                 </tr>
 
             <?php
@@ -20,13 +19,12 @@
                 @foreach($curriculums as $curriculum)
                     <tr>
                         <td>{{$i++}}</td>
-                        <td>{{$curriculum->name}}</td>
-                        <td>{{$curriculum->faculty_name}}</td>
-                        <td>{{$curriculum->educationYear->name}}</td>
-                        <td>{{$curriculum->specialty->code." : ".$curriculum->specialty->name}}</td>
-                        <td>{{$curriculum->educationType->name}}</td>
-                        <td>{{$curriculum->educationForm->name}}</td>
-                        <td>{{$curriculum->education_period."-yil"}}</td>
+                        <td>{{$curriculum->toArray()['curriculumName']}}</td>
+                        <td>{{$curriculum->toArray()['facultyName']}}</td>
+                        <td>{{$curriculum->toArray()['educationYearName']}}</td>
+                        <td>{{$curriculum->toArray()['specialtyCode']." : ".$curriculum->toArray()['specialtyName']}}</td>
+                        <td>{{$curriculum->toArray()['educationTypeName']}}</td>
+                        <td>{{$curriculum->toArray()['educationFormName']}}</td>
                     </tr>
                 @endforeach
             </table>

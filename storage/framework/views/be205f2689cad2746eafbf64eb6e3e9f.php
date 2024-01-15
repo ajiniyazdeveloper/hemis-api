@@ -10,7 +10,6 @@
                     <Td>Specialty</Td>
                     <Td>Education Type</Td>
                     <Td>Education Form</Td>
-                    <Td>Education Period</Td>
                 </tr>
 
             <?php
@@ -19,13 +18,12 @@
                 <?php $__currentLoopData = $curriculums; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $curriculum): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr>
                         <td><?php echo e($i++); ?></td>
-                        <td><?php echo e($curriculum->name); ?></td>
-                        <td><?php echo e($curriculum->faculty_name); ?></td>
-                        <td><?php echo e($curriculum->educationYear->name); ?></td>
-                        <td><?php echo e($curriculum->specialty->code." : ".$curriculum->specialty->name); ?></td>
-                        <td><?php echo e($curriculum->educationType->name); ?></td>
-                        <td><?php echo e($curriculum->educationForm->name); ?></td>
-                        <td><?php echo e($curriculum->education_period."-yil"); ?></td>
+                        <td><?php echo e($curriculum->toArray()['curriculumName']); ?></td>
+                        <td><?php echo e($curriculum->toArray()['facultyName']); ?></td>
+                        <td><?php echo e($curriculum->toArray()['educationYearName']); ?></td>
+                        <td><?php echo e($curriculum->toArray()['specialtyCode']." : ".$curriculum->toArray()['specialtyName']); ?></td>
+                        <td><?php echo e($curriculum->toArray()['educationTypeName']); ?></td>
+                        <td><?php echo e($curriculum->toArray()['educationFormName']); ?></td>
                     </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </table>

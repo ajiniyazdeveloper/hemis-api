@@ -18,7 +18,10 @@ class GroupController extends Controller
         foreach ($curriculums as $curriculum) {
             $http_value = "https://student.karsu.uz/rest/v1/data/group-list?page=1&limit=30&_curriculum=".$curriculum[0];
             $data = json_decode(curl_exec(IndexController::auth_bearer($http_value)));
-            $all_groups[] = [$curriculum[1], $data->data->pagination->totalCount];
+            foreach ($data->data->items as $val){
+                $val->curriculum = $curriculum[1];
+                $all_groups[] = $val;
+            }
         }
         return view('lists.groups.groups', compact('all_groups'));
     }

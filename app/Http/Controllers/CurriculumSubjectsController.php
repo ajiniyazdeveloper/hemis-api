@@ -21,15 +21,14 @@ class CurriculumSubjectsController extends Controller
     }
     public function curriculum_semesters($education_year, $faculty_id)
     {
-        $curriculums = CurriculumController::get_curriculum($faculty_id);
-        return view('lists.curriculum_subjects.semesters', compact('education_year', 'faculty_id', 'curriculums'));
+        return view('lists.curriculum_subjects.semesters', compact('education_year', 'faculty_id'));
     }
 
-    public function curriculum_subjects($education_year,  $faculty_id, $semester , Request $curriculums)
+    public function curriculum_subjects($education_year,  $faculty_id, $semester)
     {
-        $curriculums = $curriculums->query->parameters['curriculums'];
+        $curriculums = CurriculumController::get_curriculum($faculty_id);
         $curriculum_semesters = SemesterController::get_semester_inthe_year($curriculums, $education_year, $semester);
-        return view('lists.curriculum_subjects.curriculum_subjects', compact('education_year', 'faculty_id', 'semester' , 'curriculums' , 'curriculum_semesters'));
+        return view('lists.curriculum_subjects.curriculum_subjects', compact('education_year', 'faculty_id', 'semester' , 'curriculum_semesters'));
     }
     public function curriculum_subjects_all_data($education_year,  $faculty_id, $semester ,  Request $curriculum_semesters){
         $all_datas = [];

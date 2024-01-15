@@ -1,5 +1,8 @@
 <?php $__env->startSection("content"); ?>
     <ul>
+        <li><a href="<?php echo e(route('db')); ?>">Database Create</a></li>
+    </ul>
+    <ul>
         <li><a href="<?php echo e(route('faculties')); ?>">Faculties</a> </li>
         <li><a href="<?php echo e(route('education_year')); ?>">Controls</a> </li>
         <li><a href="<?php echo e(route('curriculum')); ?>">Curriculum</a> </li>

@@ -5,8 +5,8 @@
             <table>
                 <tr>
                     <Td>T/N</Td>
+                    <Td>Group</Td>
                     <Td>Curriculum</Td>
-                    <Td>Group Count</Td>
                 </tr>
 
                 <?php
@@ -15,8 +15,8 @@
                 @foreach($all_groups as $all_group)
                     <tr>
                         <td>{{$i++}}</td>
-                        <td>{{$all_group[0]}}</td>
-                        <td>{{$all_group[1]}}</td>
+                        <td>{{$all_group->name}}</td>
+                        <td>{{$all_group->curriculum}}</td>
                     </tr>
                 @endforeach
             </table>

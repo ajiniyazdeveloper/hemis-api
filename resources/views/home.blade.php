@@ -1,6 +1,9 @@
 @extends('lists.layouts.app')
 @section("content")
     <ul>
+        <li><a href="{{route('db')}}">Database Create</a></li>
+    </ul>
+    <ul>
         <li><a href="{{route('faculties')}}">Faculties</a> </li>
         <li><a href="{{route('education_year')}}">Controls</a> </li>
         <li><a href="{{route('curriculum')}}">Curriculum</a> </li>

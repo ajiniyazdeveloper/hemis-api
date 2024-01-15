@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::t7kaDLzuLLyF1hsh',
+            '_route' => 'generated::2dZJPekyNJ6pbuyh',
           ),
           1 => NULL,
           2 => 
@@ -123,6 +123,46 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/db' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'db',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/db/db_curriculum' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'db_curriculum',
           ),
           1 => NULL,
           2 => 
@@ -571,7 +611,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::t7kaDLzuLLyF1hsh' => 
+    'generated::2dZJPekyNJ6pbuyh' => 
     array (
       'methods' => 
       array (
@@ -594,7 +634,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::t7kaDLzuLLyF1hsh',
+        'as' => 'generated::2dZJPekyNJ6pbuyh',
       ),
       'fallback' => false,
       'defaults' => 
@@ -632,6 +672,80 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'db' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'db',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\HomeController@db',
+        'controller' => 'App\\Http\\Controllers\\HomeController@db',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'db',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'db_curriculum' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'db/db_curriculum',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\DatabaseController@db_curriculum',
+        'controller' => 'App\\Http\\Controllers\\DatabaseController@db_curriculum',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'db_curriculum',
       ),
       'fallback' => false,
       'defaults' => 
