@@ -14,6 +14,9 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/db', [HomeController::class, 'db'])->name('db');
 
 Route::get('/db/db_curriculum', [DatabaseController::class, 'db_curriculum'])->name('db_curriculum');
+Route::get('/db/db_faculties', [DatabaseController::class, 'db_faculties'])->name('db_faculties');
+Route::get('/db/db_education_years', [DatabaseController::class, 'db_education_years'])->name('db_education_years');
+Route::get('/db/db_exam_types', [DatabaseController::class, 'db_exam_types'])->name('db_exam_types');
 
 Route::get('/faculties', [FacultiesController::class, 'faculties'])->name('faculties');
 

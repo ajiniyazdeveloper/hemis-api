@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::2dZJPekyNJ6pbuyh',
+            '_route' => 'generated::hN7frjWdDHP9dJEb',
           ),
           1 => NULL,
           2 => 
@@ -163,6 +163,66 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'db_curriculum',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/db/db_faculties' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'db_faculties',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/db/db_education_years' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'db_education_years',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/db/db_exam_types' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'db_exam_types',
           ),
           1 => NULL,
           2 => 
@@ -279,7 +339,7 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/c(?|ontrols/([^/]++)(?|(*:31)|/([^/]++)(*:47))|urriculum_subjects/([^/]++)(?|(*:85)|/([^/]++)(?|(*:104)|/([^/]++)/\\[curriculums\\](?|(*:140)|/\\[curriculum_semesters\\](*:173)))))|/group_faculties/([^/]++)(*:210))/?$}sDu',
+      0 => '{^(?|/c(?|ontrols/([^/]++)(?|(*:31)|/([^/]++)(*:47))|urriculum_subjects/([^/]++)(?|(*:85)|/([^/]++)(?|(*:104)|/([^/]++)(?|(*:124)|/\\[curriculum_semesters\\](*:157)))))|/group_faculties/([^/]++)(*:194))/?$}sDu',
     ),
     3 => 
     array (
@@ -377,7 +437,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      140 => 
+      124 => 
       array (
         0 => 
         array (
@@ -398,11 +458,11 @@ app('router')->setCompiledRoutes(
           ),
           3 => NULL,
           4 => false,
-          5 => false,
+          5 => true,
           6 => NULL,
         ),
       ),
-      173 => 
+      157 => 
       array (
         0 => 
         array (
@@ -427,7 +487,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      210 => 
+      194 => 
       array (
         0 => 
         array (
@@ -611,7 +671,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::2dZJPekyNJ6pbuyh' => 
+    'generated::hN7frjWdDHP9dJEb' => 
     array (
       'methods' => 
       array (
@@ -634,7 +694,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::2dZJPekyNJ6pbuyh',
+        'as' => 'generated::hN7frjWdDHP9dJEb',
       ),
       'fallback' => false,
       'defaults' => 
@@ -746,6 +806,117 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'db_curriculum',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'db_faculties' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'db/db_faculties',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\DatabaseController@db_faculties',
+        'controller' => 'App\\Http\\Controllers\\DatabaseController@db_faculties',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'db_faculties',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'db_education_years' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'db/db_education_years',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\DatabaseController@db_education_years',
+        'controller' => 'App\\Http\\Controllers\\DatabaseController@db_education_years',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'db_education_years',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'db_exam_types' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'db/db_exam_types',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\DatabaseController@db_exam_types',
+        'controller' => 'App\\Http\\Controllers\\DatabaseController@db_exam_types',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'db_exam_types',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1064,7 +1235,7 @@ app('router')->setCompiledRoutes(
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'curriculum_subjects/{education_year}/{faculty_id}/{semester}/[curriculums]',
+      'uri' => 'curriculum_subjects/{education_year}/{faculty_id}/{semester}',
       'action' => 
       array (
         'middleware' => 
@@ -1101,7 +1272,7 @@ app('router')->setCompiledRoutes(
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'curriculum_subjects/{education_year}/{faculty_id}/{semester}/[curriculums]/[curriculum_semesters]',
+      'uri' => 'curriculum_subjects/{education_year}/{faculty_id}/{semester}/[curriculum_semesters]',
       'action' => 
       array (
         'middleware' => 

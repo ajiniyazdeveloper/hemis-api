@@ -2,7 +2,7 @@
     <section class="curriculum_subjects_ed_years">
                 <ul>
                     <?php $__currentLoopData = $education_years; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $education_year): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <li><a href="<?php echo e(route('curriculum_faculties', ['education_year' => $education_year->code])); ?>"> <?php echo e($education_year->name); ?></a></li>
+                        <li><a href="<?php echo e(route('curriculum_faculties', ['education_year' => $education_year->toArray()['EducationYearCode']])); ?>"> <?php echo e($education_year->toArray()['EducationYearName']); ?></a></li>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </ul>
     </section>

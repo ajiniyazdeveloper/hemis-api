@@ -8,7 +8,7 @@
                 @foreach($faculties as $faculty)
                     <ol class="border-separate border border-slate-500">
                         <li>
-                            <a href="{{route("curriculum_semesters", ['education_year'=>$education_year,'faculty_id' => $faculty->id])}}">{{$faculty->name}}</a>
+                            <a href="{{route("curriculum_semesters", ['education_year'=>$education_year,'faculty_id' => $faculty->toArray()['facultyId']])}}">{{$faculty->toArray()['facultyName']}}</a>
                         </li>
                     </ol>
                 @endforeach

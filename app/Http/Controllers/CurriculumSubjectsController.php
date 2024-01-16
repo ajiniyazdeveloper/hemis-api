@@ -7,6 +7,7 @@ use App\Http\Controllers\CurriculumController;
 use App\Http\Controllers\FacultiesController;
 use App\Http\Controllers\EducationYearsController;
 use App\Http\Controllers\SemesterController;
+use App\Models\Curriculum;
 class CurriculumSubjectsController extends Controller
 {
     public function education_year()

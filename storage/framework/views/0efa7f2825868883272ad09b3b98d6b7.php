@@ -7,7 +7,7 @@
                 <?php $__currentLoopData = $faculties; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $faculty): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <ol class="border-separate border border-slate-500">
                         <li>
-                            <a href="<?php echo e(route("curriculum_semesters", ['education_year'=>$education_year,'faculty_id' => $faculty->id])); ?>"><?php echo e($faculty->name); ?></a>
+                            <a href="<?php echo e(route("curriculum_semesters", ['education_year'=>$education_year,'faculty_id' => $faculty->toArray()['facultyId']])); ?>"><?php echo e($faculty->toArray()['facultyName']); ?></a>
                         </li>
                     </ol>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

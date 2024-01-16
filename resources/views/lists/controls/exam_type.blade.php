@@ -4,7 +4,7 @@
         <div>
             <ul>
                 @foreach($exam_types as $exam_type)
-                    <li><a href="{{route('all_controls', ['exam_type' => $exam_type->code, 'education_year' => $education_year,])}}"> {{$exam_type->name}} </a></li>
+                    <li><a href="{{route('all_controls', ['exam_type' => $exam_type->toArray()['ExamTypeCode'], 'education_year' => $education_year,])}}"> {{$exam_type->toArray()['ExamTypeName']}} </a></li>
                 @endforeach
             </ul>
         </div>

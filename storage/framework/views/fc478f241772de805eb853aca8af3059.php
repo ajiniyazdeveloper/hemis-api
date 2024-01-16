@@ -3,7 +3,7 @@
         <div>
             <ul>
                 <?php $__currentLoopData = $exam_types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $exam_type): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <li><a href="<?php echo e(route('all_controls', ['exam_type' => $exam_type->code, 'education_year' => $education_year,])); ?>"> <?php echo e($exam_type->name); ?> </a></li>
+                    <li><a href="<?php echo e(route('all_controls', ['exam_type' => $exam_type->toArray()['ExamTypeCode'], 'education_year' => $education_year,])); ?>"> <?php echo e($exam_type->toArray()['ExamTypeName']); ?> </a></li>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </ul>
         </div>

@@ -12,7 +12,7 @@
                     <tr class="border-separate border border-slate-500">
                         <td><?php echo e($i++); ?></td>
                         <td>
-                            <?php echo e($faculty->name); ?>
+                            <?php echo e($faculty->toArray()['facultyName']); ?>
 
                         </td>
                     </tr>

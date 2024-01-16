@@ -13,7 +13,7 @@
                     <tr class="border-separate border border-slate-500">
                         <td>{{$i++}}</td>
                         <td>
-                            {{$faculty->name}}
+                            {{$faculty->toArray()['facultyName']}}
                         </td>
                     </tr>
                 @endforeach
